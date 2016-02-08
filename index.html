@@ -1,1 +1,70 @@
-Hello World
+<!DOCTYPE html>
+    <html>
+    <html lang="en">
+    <head>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/addons/p5.dom.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/p5.js"></script>
+
+    </head>
+
+
+<h1>Cameron Priestley</h1>
+<h2>Hw One</2>
+
+
+<script>
+var points=[];
+
+function setup() {
+  createCanvas(600,600);
+  for(var i= 0; i<100; i++){
+
+    points.push(new morePoints());
+
+  }
+
+}
+
+function draw() {
+  background(0);
+  for(var i=0; i<points.length; i++){
+    points[i].display();
+    points[i].move();
+
+  };
+
+}
+
+
+function morePoints(){
+
+  this.x = windowWidth/2;
+  this.y= random(0, 600);
+  this.diameterX= random(2,20);
+  this.diameterY= random(50,70);
+  this.speed=20;
+
+  this.display= function(){
+
+     stroke(255);
+   line(this.x, this.y, this.diameterX, this.diameterY);
+
+
+  };
+
+  this.move=function(){
+    this.x+=random(this.speed);
+    if(this.x>windowWidth){
+
+      this.x=0;
+    }
+
+  };
+
+}
+
+</script>
+
+
+</html>
