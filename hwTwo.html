@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+    <html lang="en">
+    <head>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/addons/p5.dom.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/p5.js"></script>
+
+    </head>
+<script>
+var phrase = "Piece by Piece Piece by piece They tear at you: Peeling away layers of being, Lying about who you are, Speaking for your dreams. In the squalor of their eyes You are an outlaw. Dressing you in a jacket of lies —tailor-made in steel— You fit their perfect picture. Take it off! Make your own mantle. Question the interrogators. Eyeball the death in their gaze. Say you won’t succumb. Say you won’t believe them When they rename you. Say you won’t accept their codes, Their colors, their putrid morals. Here you have a way. Here you can sing victory. Here you are not a conquered race Perpetual victim —the sullen face in a thunderstorm. Hands/minds, they are carving out A sanctuary. Use these weapons Against them. Use your given gifts, they are not stone.";
+
+ var find = 'you';
+ var shape= 'Piece';
+
+
+var i = 0;
+   var speed = 10;
+   var j=0;
+
+var gridSize=25;
+
+
+
+ function setup() {
+   createCanvas(500, 500);
+
+
+
+
+ }
+
+
+ function draw() {
+   background(0);
+
+
+   display();
+   displayTwo();
+
+   displayThree();
+   move();
+   look();
+   lookTwo();
+   grid();
+   replacement("cameron");
+
+
+
+
+
+
+
+
+ }
+
+ function display() {
+   for(var x =0; x<phrase.length; x++){
+
+   var check = phrase.substring(random(x+75), 100);
+
+}
+ textSize(random(10));
+   fill(255);
+   text(check, i, 50, 300, 300);
+ }
+
+ function displayTwo(){
+   for(var z=0; z<phrase.length;z++){
+   var phraseTwo = phrase.substring(z,200);
+   }
+   textSize(random(400));
+   fill(255);
+   text(phraseTwo, 50, i+20, 300, 300);
+ }
+
+ function displayThree(){
+     for(var c=0; c<phrase.length; c++){
+
+   var phraseThree = phrase.substring(c,500);
+   }
+   textSize(random(300));
+   fill(random(40,255));
+   text(phraseThree, 50, j+60, 300, 300);
+
+
+
+ }
+
+ function move() {
+
+
+   i = i + speed / 10;
+   if (i > windowWidth) {
+
+     i = 0;
+   }
+  j=j+speed / 5;
+  if(j> windowHeight){
+
+    j=0;
+  }
+ }
+
+ function look(){
+
+   var iSee= match(phrase, find);
+   fill(random(40,255));
+   text(iSee, 60+i,  70, 300,300);
+   //print(iSee);
+
+ }
+
+ function lookTwo(){
+
+   var iSeeTwo = match(phrase, shape);
+   textSize(400);
+   fill(0);
+   stroke(255);
+   text(iSeeTwo, 70+i, 80, 500, 500);
+   //print(iSeeTwo);
+ }
+
+ function grid(){
+   for(var l= gridSize; l<=width; l+= gridSize){
+      for(var m= gridSize; m<= height; m+=gridSize){
+        fill(random(0,255));
+        //stroke(0);
+        rect(l-17, random(m-25), 5, 30);
+
+        stroke(0);
+        //line(l,m, width/2, height/2);
+
+      }
+   }
+ }
+
+   function replacement(name) {
+     var replace = phrase.replace("you", name);
+     textSize(random(500));
+     text(replace, 50, 60, 350, 350);
+     print(replace);
+   }
+
+
+
+</script>
+
+
+</html>
