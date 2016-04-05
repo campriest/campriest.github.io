@@ -56,7 +56,7 @@
   // }
 
 var myArea;
-var headline;
+var h1;
 
   function preload(){
       donSound= loadSound('tragedy.mp3');
@@ -65,13 +65,13 @@ var headline;
   }
 
   function setup(){
-      headline = createElement('h1', 'Donald Trump Magnetic Poetry Reader');
+      h1 = createElement('h1', 'Donald Trump Magnetic Poetry Reader');
        myArea =  createCanvas(windowWidth, windowHeight);
 
-      headline.position(40,0);
-      headline.style('font-family', 'Montserrat');
-      headline.style('size', '50px');
-      headline.style('color', 'rgb(255, 10, 10)');
+      h1.position(40,0);
+      h1.style('font-family', 'Montserrat');
+      h1.style('size', '50px');
+      h1.style('color', 'rgb(255, 10, 10)');
 
       newQuote = quote.split(' ');
           for(var i=0; i < newQuote.length; i++){
