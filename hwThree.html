@@ -58,11 +58,7 @@
 // var myArea;
 var h1;
 
-  function preload(){
-      donSound= loadSound('tragedy.mp3');
 
-
-  }
 
   function setup(){
       createCanvas(600, 600);
@@ -85,7 +81,11 @@ var h1;
 
 
   }
+  function preload(){
+      donSound= loadSound('tragedy.mp3');
 
+
+  }
   function draw(){
       background(255, 255, 220);
       for(var i=0; i< words.length; i++){
