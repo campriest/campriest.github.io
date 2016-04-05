@@ -14,8 +14,7 @@ var words=[];
 //
 // }
 
-var myArea;
-var headline;
+
 
 function preload(){
     donSound= loadSound('tragedy.mp3');
@@ -24,8 +23,8 @@ function preload(){
 }
 
 function setup(){
-    myArea = createCanvas(windowWidth, windowHeight);
-    headline = createElement('h1', 'Donald Trump Magnetic Poetry Reader');
+    var myArea = createCanvas(windowWidth, windowHeight);
+    var headline = createElement('h1', 'Donald Trump Magnetic Poetry Reader');
     this.headline.position(40,0);
     this.headline.style('font-family', 'Montserrat');
     this.headline.style('size', '50px');
