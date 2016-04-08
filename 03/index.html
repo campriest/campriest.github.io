@@ -84,22 +84,19 @@ var h1;
 
 
   }
-  function preload(){
+    function preload(){
       donSound= loadSound('/03/assets/tragedy.mp3');
+    }
 
-
-  }
-  function draw(){
+    function draw(){
       background(255, 255, 220);
       for(var i=0; i< words.length; i++){
           words[i].update();
           words[i].show();
       }
-  }
+    }
 
-
-
-  function Words(word, posX, posY){
+    function Words(word, posX, posY){
       this.currentX = posX;
       this.currentY = posY;
       this.word = word;
