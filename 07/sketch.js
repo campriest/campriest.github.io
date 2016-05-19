@@ -56,7 +56,7 @@ function draw() {
     var humidity = weather.main.humidity;
     var wind = weather.wind.speed;
 
-    var textOne = createP("Brooklyn has " + temp + " MPH wind");
+    var textOne = createP("Brooklyn has " + wind + " MPH wind");
     // var textTwo = ;
     // var textThree = ;
 
@@ -66,7 +66,7 @@ function draw() {
 
     var tempTwo = weatherTwo.main.temp;
     var humidityTwo = weatherTwo.main.humidity;
-    var windTwo = weatherTwo.main.humidity;
+    var windTwo = weatherTwo.wind.speed;
 
     var textTwo = createP("Queens has " + windTwo + " MPH wind");
 
